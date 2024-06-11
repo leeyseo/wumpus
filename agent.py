@@ -231,7 +231,6 @@ class Agent:
 
         #같은 위치를 여러 번 방문하는지 확인
         if len(set(self.recent_positions[-4:])) < 4:
-            print("무한 루프 감지: 위치 반복!")
             return True
 
         #같은 방향으로 반복해서 움직이는지 확인
@@ -243,7 +242,6 @@ class Agent:
                 ['East', 'West', 'East', 'West'],
                 ['West', 'East', 'West', 'East']
             ]:
-                print("무한 루프 감지: 방향 반복!")
                 return True
 
             #동일한 이동 패턴이 반복되는지 확인
@@ -251,7 +249,6 @@ class Agent:
                 ['GoForward', 'TurnLeft', 'GoForward', 'TurnRight'],
                 ['GoForward', 'TurnRight', 'GoForward', 'TurnLeft']
             ]:
-                print("무한 루프 감지: 이동 패턴 반복!")
                 return True
 
         return False
