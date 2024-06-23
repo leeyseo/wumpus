@@ -1,6 +1,6 @@
 import random
 import copy
-
+#wumpus world
 class WumpusWorld:
     def __init__(self, size=4):
         self.size = size
